@@ -102,7 +102,12 @@ describe "A better distance_of_time_in_words" do
       ["2009-3-16".to_time + 1.minute, "2008-4-14".to_time, "11 months, 2 days, and 1 minute"],
       ["2009-4-14".to_time, "2008-3-16".to_time, "1 year, 4 weeks, and 1 day"],
       ["2009-2-01".to_time, "2009-3-01".to_time, "1 month"],
-      ["2008-2-01".to_time, "2008-3-01".to_time, "1 month"]
+      ["2008-2-01".to_time, "2008-3-01".to_time, "1 month"],
+      ["2019-5-01".to_time, "2019-5-06".to_time, "5 days"],
+      ["2019-5-01".to_time, "2019-5-17".to_time, "2 weeks and 2 days"],
+      ["2014-3-31".to_time, "2014-5-01".to_time, "1 month"],
+      ["2014-1-31".to_time, "2014-2-28".to_time, "1 month"],
+      ["2014-1-31".to_time, "2014-3-01".to_time, "1 month"]
     ]
     fragments.each do |start, finish, output|
       it "should be #{output}" do
